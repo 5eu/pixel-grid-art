@@ -2,6 +2,8 @@
 
 A fun and intuitive pixel art editor built with vanilla JavaScript and HTML5 Canvas. Create retro-style pixel art with a grid-based drawing tool!
 
+## 🌐 [✨ Live Demo](https://pixel-grid-art.vercel.app)
+
 ## ✨ Features
 
 - **Multiple Grid Sizes** - Choose from 16x16 to 64x64
