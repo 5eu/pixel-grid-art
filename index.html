@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🎨 Pixel Grid Art</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <h1>🎨 Pixel Grid Art</h1>
+      <p>Create pixel art with an easy-to-use grid</p>
+    </header>
+
+    <div class="container">
+      <!-- Controls -->
+      <div class="controls">
+        <div class="control-section">
+          <label>
+            Grid Size:
+            <select id="gridSize">
+              <option value="16">16x16</option>
+              <option value="24">24x24</option>
+              <option value="32" selected>32x32</option>
+              <option value="48">48x48</option>
+              <option value="64">64x64</option>
+            </select>
+          </label>
+
+          <label>
+            Pixel Size:
+            <input type="range" id="pixelSize" min="8" max="24" value="16" />
+            <span id="pixelSizeValue">16px</span>
+          </label>
+        </div>
+
+        <div class="control-section">
+          <label>
+            Color:
+            <input type="color" id="colorPicker" value="#000000" />
+          </label>
+
+          <label>
+            Tool:
+            <select id="tool">
+              <option value="draw">✏️ Draw</option>
+              <option value="erase">🧹 Erase</option>
+              <option value="fill">🪣 Fill</option>
+              <option value="eyedropper">💧 Eyedropper</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="button-group">
+          <button id="clearBtn" class="btn btn-secondary">🗑️ Clear</button>
+          <button id="downloadBtn" class="btn btn-primary">💾 Download PNG</button>
+        </div>
+      </div>
+
+      <!-- Canvas Container -->
+      <div class="canvas-container">
+        <canvas id="canvas"></canvas>
+        <div id="gridOverlay"></div>
+      </div>
+
+      <!-- Color Palette -->
+      <div class="palette">
+        <div class="palette-title">Quick Colors:</div>
+        <div class="palette-colors" id="paletteColors"></div>
+      </div>
+
+      <!-- Instructions -->
+      <div class="instructions">
+        <h3>⌨️ Keyboard Shortcuts</h3>
+        <ul>
+          <li><kbd>D</kbd> - Draw tool</li>
+          <li><kbd>E</kbd> - Erase tool</li>
+          <li><kbd>F</kbd> - Fill tool</li>
+          <li><kbd>I</kbd> - Eyedropper tool</li>
+          <li><kbd>C</kbd> - Clear canvas</li>
+          <li><kbd>Z</kbd> - Undo (Ctrl+Z)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
